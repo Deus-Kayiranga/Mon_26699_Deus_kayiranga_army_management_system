@@ -142,3 +142,8 @@ data flows from one user role to another and where decisions are made. This alig
 
 
 
+## 📸 BPMN Diagram Screenshot
+
+**Army management system BPMN Diagram**
+
+![Screenshot 2025-05-24 172719](https://github.com/user-attachments/assets/da9be2a4-7058-4115-a0af-b707b32a70e5)
