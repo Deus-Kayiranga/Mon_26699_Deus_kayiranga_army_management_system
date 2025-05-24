@@ -12,7 +12,7 @@ The Army Management System is a database-driven project designed to manage soldi
 
 ---
 
-## Technologies Used
+## 🚀Technologies Used
 
 - Oracle 19c Database
 
@@ -25,9 +25,9 @@ The Army Management System is a database-driven project designed to manage soldi
 - draw.io (for ER and BPMN diagrams)
 
 
-##🚀 PHASE 1 — Database Design and Problem Analysis
+## 🚀 PHASE 1 — Database Design and Problem Analysis
 
-#📍 Entities and Relationships
+# 📍 Entities and Relationships
 
 The system contains the following major entities:
 
@@ -35,13 +35,13 @@ The system contains the following major entities:
 
 **💡 Soldiers**- Personnel enlisted in the military.
 
-**💡 Units **- Operational groups soldiers are assigned to.
+**💡 Units**- Operational groups soldiers are assigned to.
 
-**💡 Trainning **- Tracks trainning sessions per soldier.
+**💡 Trainning**- Tracks trainning sessions per soldier.
 
-**💡 Missions **- Deployment operations soldiers take part in.
+**💡 Missions**- Deployment operations soldiers take part in.
 
-**💡 Inventory **- Items issued to units.
+**💡 Inventory**- Items issued to units.
 
 **💡 Soldier_missions**- A junction table for the many to many relationship between soldiers and missions.
 
