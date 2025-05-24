@@ -1,4 +1,4 @@
-###🏠 Army Management System 📚
+### 🏠 Army Management System 📚
 
 ## 🌟 Introduction
 
@@ -29,7 +29,7 @@ The Army Management System is a database-driven project designed to manage soldi
 
 # 📍 Entities and Relationships
 
-The system contains the following major entities:
+**The system contains the following major entities:**
 
 **💡 Users**- Administrative users managing the system.
 
