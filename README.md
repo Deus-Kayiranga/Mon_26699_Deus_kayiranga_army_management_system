@@ -147,3 +147,143 @@ data flows from one user role to another and where decisions are made. This alig
 **Army management system BPMN Diagram**
 
 ![Screenshot 2025-05-24 172719](https://github.com/user-attachments/assets/da9be2a4-7058-4115-a0af-b707b32a70e5)
+
+🔍 Diagram Explanation
+
+➤ Process Flow Overview:
+
+The process starts with soldier registration and continues through:
+
+   Assign to Unit
+
+   Equipment Assignment & Logging
+
+   Check Equipment Availability
+
+   Plan Deployment
+
+   Conduct Training
+
+   Execute Mission
+   
+
+↩ Arrows branching and looping reflect repeatable or conditional activities like checking equipment status before mission deployment.
+
+
+## ➤ Key Interactions:
+
+   Personnel ↔ Equipment: Once a soldier is assigned, equipment is issued.
+
+   Equipment ↔ Deployment: Only available equipment allows mission planning to proceed.
+
+   Training ↔ Mission Execution: Training is required before final deployment.
+
+## ➤ Decision Points:
+
+   ✅ Equipment Check: Is gear available before planning?
+
+   🔁 Loop: If not, training and logs are revisited or restarted.
+
+
+## 🧩 MIS Alignment
+
+   📊 Decision Support: Clear visibility into soldier readiness and equipment status.
+
+   🔄 Operational Streamlining: Minimizes manual checks.
+
+   📥 Data Capture: Each step updates logs used for command reporting.
+
+
+
+  ###  📂 Phase III: Logical Model Design (ER Diagram)
+
+In this phase, we transitioned from workflow modeling to building a normalized logical data model. This model reflects the needs identified in the problem statement (Phase I) and the flows modeled in the BPMN diagram (Phase II).
+
+## 📍 What This Phase Covers
+
+### ✅ Task	Description
+
+Definition of entities	Soldier, Unit, Training, Mission, Inventory, Users, Soldier_Missions
+
+Attributes and keys	Each entity includes PKs and FKs with suitable data types and constraints
+
+Relationship and constraint modeling	1:1, 1:N, M:N links modeled and enforced
+
+Normalization	Achieved 3NF by eliminating redundancy and transitive dependencies
+
+Real-world readiness	Handles mission reassignment, equipment status, and multi-training records
+
+## 🔷 ER Model Overview
+
+Entity	Key Attributes	Data Types / Constraints	PK / FK
+
+🧑‍💻 User	user_id, name, email, password, role	role CHECK ('Admin', 'Officer'), email UNIQUE, NOT NULL	PK: user_id
+
+🪖 Soldier	soldier_id, name, rank, birthdate, unit_id, created_by	birthdate DATE, rank VARCHAR2, all NOT NULL	PK: soldier_id, FK: unit_id
+
+🪧 Unit	unit_id, name, base_location, commander	name NOT NULL	PK: unit_id
+
+🎯 Mission	mission_id, title, objective, location, start_date, end_date	start_date, end_date DATE	PK: mission_id
+
+🎓 Training	training_id, soldier_id, title, start_date, end_date, status	status CHECK ('Planned', 'Ongoing', 'Completed')	PK: training_id, FK: soldier_id
+
+📦 Inventory	item_id, unit_id, name, quantity, status	status CHECK ('Available', 'Issued')	PK: item_id, FK: unit_id
+
+🔗 Soldier_Mission	id, soldier_id, mission_id	Junction table for M:N relationship	PK: id, FKs: soldier_id, mission_id
+
+### 🔗 Relationships & Constraints
+
+Relationship	Type	Constraint Description
+
+User → Soldier	1:N	Each soldier record created by a system user
+
+Unit → Soldier	1:N	One unit can contain many soldiers
+
+Soldier → Training	1:N	A soldier can undergo multiple trainings
+
+Soldier ↔ Mission	M:N	Managed via Soldier_Mission linking table
+
+Unit → Inventory	1:N	Each inventory item belongs to a single unit
+
+## ✅ Key Constraints
+
+Constraint Type	Applied Fields	Description
+
+NOT NULL	PKs, email, rank, name	Enforces required data presence
+
+UNIQUE	email, name	Prevents duplicate entries
+
+CHECK	role, status, quantity	Limits values to predefined sets
+
+DEFAULT	status, created_at	Auto-fill default values for new records
+
+## 🧹 Normalization
+
+Normal Form	Description
+
+1NF	All attributes atomic; no repeating groups
+
+2NF	Non-key attributes fully dependent on primary key
+
+3NF	No transitive dependencies; each field depends only on the PK
+
+### 📐 Handling Data Scenarios
+
+Real-World Scenario	Implementation in the Model
+
+
+## 🆕 New soldier joins	Insert into Soldier table with link to User and Unit
+
+**🛡 Inventory assigned to unit**
+
+Insert into Inventory with unit_id FK
+
+**🎯 Soldier assigned to mission	Insert**
+
+into Soldier_Mission with soldier_id and mission_id
+
+**📚 Training assigned**
+
+Insert into Training table → set status to 'Planned'
+
+## 📅 Prevent assignments on holidays	Controlled using triggers in Phase VII (Holiday table + validation)
