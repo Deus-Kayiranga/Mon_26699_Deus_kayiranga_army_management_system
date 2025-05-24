@@ -20,7 +20,7 @@ The Army Management System is a database-driven project designed to manage soldi
 
 - PL/SQL (Procedures, Functions, Triggers)
 
-- Git & GitHub
+- GitHub
 
 - draw.io (for ER and BPMN diagrams)
 
@@ -293,3 +293,77 @@ Insert into Training table → set status to 'Planned'
 
 ![ChatGPT Image May 24, 2025, 06_32_07 PM](https://github.com/user-attachments/assets/775196f4-a6c9-4e7c-97c6-28880f8d087d)
 
+
+
+
+# 💾 Phase IV: Database (Pluggable Database) Creation and Naming
+
+## 📍 What This Phase Covers:
+
+## 🧱 1. Database Creation (Container Setup)
+
+**Before creating a pluggable database, we start by connecting as SYSDBA to the CDB root container and check existing containers.**
+
+```sql
+
+sqlplus / as sysdba
+
+```
+
+**Check existing pluggable databases**
+
+```sql
+
+SHOW PDBS;
+```
+
+**Result:**
+
+```sql
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 ORCLPDB                        MOUNTED
+
+```
+
+**✅ You can confirm you're working inside CDB$ROOT using:**
+
+```sql
+
+SHOW CON_NAME;
+
+```
+
+## 📸 Screenshot Requirement showing pdb:
+
+
+
+## 📊 Oracle Enterprise Manager (OEM) Configuration
+
+After setting up the database, we opened Oracle Enterprise Manager (OEM) to monitor and manage our PDB.
+
+   Accessed at: https://localhost:8443/em
+
+   OEM shows:
+
+   Active containers (CDB$ROOT, ORCLPDB, and our new PDB)
+
+   Memory usage and container activity
+
+   Uptime, resource allocation, and storage graphs
+   
+
+## 📸 Screenshot Requirement:
+
+
+
+
+# 🏗 Phase V: Table Implementation & Data Insertion
+
+## 📍 What This Phase Covers
+
+
+## 🧱 5.1 Table Creation
+ 
