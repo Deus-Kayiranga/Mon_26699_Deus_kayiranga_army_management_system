@@ -91,15 +91,15 @@ Without a centralized digital system, military administration faces:
 
 ### 🎯 Project Goals
 
-🧩 Digitize and centralize military personnel records
+      🧩 Digitize and centralize military personnel records
 
-🎯 Enable mission and training tracking per soldier
+      🎯 Enable mission and training tracking per soldier
 
-🛠 Improve inventory visibility by unit
+      🛠 Improve inventory visibility by unit
 
-🔐 Enforce user roles and secure access control
+     🔐 Enforce user roles and secure access control
 
-📈 Support reporting and auditing of operations
+     📈 Support reporting and auditing of operations
 
 
 
