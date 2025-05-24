@@ -382,3 +382,17 @@ CREATE TABLE Users (
 );
 ```
  
+The Users table stores all registered system users — specifically those with administrative or officer responsibilities.
+
+## Units table
+
+```sql
+CREATE TABLE Units (
+    unit_id NUMBER PRIMARY KEY,
+    name VARCHAR2(50) NOT NULL,
+    base_location VARCHAR2(100),
+    commander VARCHAR2(50)
+);
+```
+
+
