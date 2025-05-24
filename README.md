@@ -278,6 +278,7 @@ Real-World Scenario	Implementation in the Model
 
 Insert into Inventory with unit_id FK
 
+
 **🎯 Soldier assigned to mission	Insert**
 
 into Soldier_Mission with soldier_id and mission_id
@@ -287,3 +288,8 @@ into Soldier_Mission with soldier_id and mission_id
 Insert into Training table → set status to 'Planned'
 
 ## 📅 Prevent assignments on holidays	Controlled using triggers in Phase VII (Holiday table + validation)
+
+## 📸 ER Diagram Screenshot
+
+![ChatGPT Image May 24, 2025, 06_32_07 PM](https://github.com/user-attachments/assets/775196f4-a6c9-4e7c-97c6-28880f8d087d)
+
