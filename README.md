@@ -25,8 +25,6 @@ The Army Management System is a database-driven project designed to manage soldi
 - draw.io (for ER and BPMN diagrams)
 
 
-## 🚀 PHASE 1 — Database Design and Problem Analysis
-
 # 📍 Entities and Relationships
 
 **The system contains the following major entities:**
@@ -44,5 +42,11 @@ The Army Management System is a database-driven project designed to manage soldi
 **💡 Inventory**- Items issued to units.
 
 **💡 Soldier_missions**- A junction table for the many to many relationship between soldiers and missions.
+
+
+
+## 🚀 PHASE 1 — Database Design and Problem Analysis
+
+**Objective:** Defined the 
 
 
