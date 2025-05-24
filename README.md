@@ -291,7 +291,8 @@ Insert into Training table → set status to 'Planned'
 
 ## 📸 ER Diagram Screenshot
 
-![ChatGPT Image May 24, 2025, 06_32_07 PM](https://github.com/user-attachments/assets/775196f4-a6c9-4e7c-97c6-28880f8d087d)
+![ChatGPT Image May 24, 2025, 06_32_07 PM](https://github.com/user-attachments/assets/4a5b186a-8ca3-42fd-949a-ebe7dac48274)
+
 
 
 
@@ -338,6 +339,7 @@ SHOW CON_NAME;
 
 ## 📸 Screenshot Requirement showing pdb:
 
+![WhatsApp Image 2025-05-24 at 12 47 59_2c23a2fb](https://github.com/user-attachments/assets/9de4e5b2-0fc6-41eb-bed6-e90bf4ad4ec2)
 
 
 ## 📊 Oracle Enterprise Manager (OEM) Configuration
@@ -358,6 +360,7 @@ After setting up the database, we opened Oracle Enterprise Manager (OEM) to moni
 ## 📸 Screenshot Requirement:
 
 
+![WhatsApp Image 2025-05-25 at 00 03 25_c9a09f0a](https://github.com/user-attachments/assets/2deae454-24d4-4f0a-89ee-7b12b430cb04)
 
 
 # 🏗 Phase V: Table Implementation & Data Insertion
@@ -366,4 +369,16 @@ After setting up the database, we opened Oracle Enterprise Manager (OEM) to moni
 
 
 ## 🧱 5.1 Table Creation
+
+## 1. 👥 Users Table
+
+```sql
+CREATE TABLE Users (
+    user_id NUMBER PRIMARY KEY,
+    name VARCHAR2(50) NOT NULL,
+    email VARCHAR2(100) UNIQUE,
+    password VARCHAR2(100) NOT NULL,
+    role VARCHAR2(20) CHECK (role IN ('Admin', 'Officer'))
+);
+```
  
