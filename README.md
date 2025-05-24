@@ -71,7 +71,7 @@ Without a centralized digital system, military administration faces:
 
 
 
-### 📍 Context
+## 📍 Context
 
 🪖 Military bases handle thousands of soldiers across multiple units.
 
@@ -81,7 +81,9 @@ Without a centralized digital system, military administration faces:
 
 💻 There's a growing need for digitized and secure army databases.
 
-### 👥 Target Users
+
+
+## 👥 Target Users
 
 🧑‍✈️ Commanders / Officers – To assign and monitor soldier activities
 
@@ -89,18 +91,54 @@ Without a centralized digital system, military administration faces:
 
 🧑‍🎓 Developers (You) – To build, test, and document the database system
 
-### 🎯 Project Goals
 
-      🧩 Digitize and centralize military personnel records
 
-      🎯 Enable mission and training tracking per soldier
+## 🎯 Project Goals
 
-      🛠 Improve inventory visibility by unit
+🧩 Digitize and centralize military personnel records
 
-     🔐 Enforce user roles and secure access control
+🎯 Enable mission and training tracking per soldier
 
-     📈 Support reporting and auditing of operations
+🛠 Improve inventory visibility by unit
 
+ 🔐 Enforce user roles and secure access control
+
+ 📈 Support reporting and auditing of operations
+
+
+
+ # 🔄 Phase II: Business Process Modeling (MIS)
+
+ **Objective:** Visualize the flow of military operations (such as soldier registration, mission assignment, and inventory management) using BPMN to clarify roles, interactions, and decision points.
+ 
+## 📍 What This Phase Covers
+
+This phase focuses on visualizing how key military departments — such as Personnel, Operations, and Logistics — interact with the system. Using Business Process Model and Notation (BPMN), the workflow illustrates how
+data flows from one user role to another and where decisions are made. This aligns with MIS principles by improving transparency, command coordination, and system accountability.
+
+## 📏 Scope of Definition
+
+### 🎭 Actor Responsibilities
+
+| Actor             | Responsibilities                                                                 |
+|------------------|------------------------------------------------------------------------------------|
+| 🧑‍✈️ Commander       | Registers soldiers, assigns units, approves missions and training              |
+| 🧑‍🏫 Training Officer | Schedules training, monitors completion status                                 |
+| 🧑‍🔧 Logistics Officer| Manages inventory, issues equipment to units                                  |
+| 🖥️ System Functions  | Validates input, links records, enforces role-based access                    |
+
+---
+
+### 🏊‍♂ Swimlanes and Their Purpose
+
+| Swimlane             | Role / Component           | Key Actions                                                                 |
+|----------------------|----------------------------|------------------------------------------------------------------------------|
+| 🧑‍✈️ Commander           | User Role                    | Registers soldiers, views unit rosters, assigns missions                    |
+| 🧑‍🏫 Training             | Training Management Module    | Schedules sessions, tracks completion, reports results                      |
+| 🧑‍🔧 Inventory            | Logistics Subsystem           | Adds items, updates stock levels, tracks unit issuance                     |
+| 🎯 Mission Assignment    | Operations Logic Module       | Links soldiers to missions, enforces availability rules                     |
+| 🗂️ Personnel Record Store| Data Storage Layer            | Holds soldier info, training history, mission logs                          |
+| 🔐 System Security       | Access Control Subsystem      | Validates user roles and permissions                                        |
 
 
 
