@@ -1,4 +1,4 @@
-### 🏠 Army Management System 📚
+# 🏠 Army Management System 📚
 
 ## 🌟 Introduction
 
@@ -14,7 +14,7 @@ The Army Management System is a database-driven project designed to manage soldi
 
 ## 🚀Technologies Used
 
-- Oracle 19c Database
+- Oracle 21c Database
 
 - SQL*Plus / SQL Developer
 
