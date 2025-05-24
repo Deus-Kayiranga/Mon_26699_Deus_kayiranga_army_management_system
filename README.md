@@ -61,43 +61,45 @@ The Army Management System is a database-driven project designed to manage soldi
 
 Without a centralized digital system, military administration faces:
 
-    🧭 Disorganized soldier and unit records
+🧭 Disorganized soldier and unit records
 
-    📂 Limited mission tracking and accountability
+📂 Limited mission tracking and accountability
 
-    📉 Inventory mismanagement and resource duplication
+📉 Inventory mismanagement and resource duplication
 
-    🔐 Minimal access control and security auditing
+🔐 Minimal access control and security auditing
+
+
 
 ### 📍 Context
 
-    🪖 Military bases handle thousands of soldiers across multiple units.
+🪖 Military bases handle thousands of soldiers across multiple units.
 
-    📜 Operations depend on accurate records and timely deployment.
+📜 Operations depend on accurate records and timely deployment.
 
-    📊 Manual tracking is prone to error and cannot scale.
+📊 Manual tracking is prone to error and cannot scale.
 
-    💻 There's a growing need for digitized and secure army databases.
+💻 There's a growing need for digitized and secure army databases.
 
 ### 👥 Target Users
 
-    🧑‍✈️ Commanders / Officers – To assign and monitor soldier activities
+🧑‍✈️ Commanders / Officers – To assign and monitor soldier activities
 
-    🧑‍💼 Admins – To register users and maintain system access
+🧑‍💼 Admins – To register users and maintain system access
 
-    🧑‍🎓 Developers (You) – To build, test, and document the database system
+🧑‍🎓 Developers (You) – To build, test, and document the database system
 
 ### 🎯 Project Goals
 
-    🧩 Digitize and centralize military personnel records
+🧩 Digitize and centralize military personnel records
 
-    🎯 Enable mission and training tracking per soldier
+🎯 Enable mission and training tracking per soldier
 
-    🛠 Improve inventory visibility by unit
+🛠 Improve inventory visibility by unit
 
-    🔐 Enforce user roles and secure access control
+🔐 Enforce user roles and secure access control
 
-    📈 Support reporting and auditing of operations
+📈 Support reporting and auditing of operations
 
 
 
